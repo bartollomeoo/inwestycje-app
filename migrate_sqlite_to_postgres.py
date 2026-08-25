@@ -2,7 +2,7 @@
 
 Użycie:
     DATABASE_URL="..." python migrate_sqlite_to_postgres.py
-"""
+
 from pathlib import Path
 import os
 import sqlite3
@@ -99,3 +99,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+zostawione dla potomnych """
