@@ -125,7 +125,7 @@ def render_analysis_tab(transactions):
         st.warning("Brak danych dla wybranego tickera. Sprawdź symbol spółki.")
         return
     st.plotly_chart(price_chart(history, ticker), width="stretch")
-    close = history["Close"]
+    close = history["Close"].dropna()
     s1, s2, s3, s4 = st.columns(4)
     s1.metric("Średnia cena", f"{close.mean():,.2f}")
     s2.metric("Minimum", f"{close.min():,.2f}")
